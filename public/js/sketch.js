@@ -47,7 +47,7 @@ function draw() {
     if (weatherCode >= 200 && weatherCode <= 299) {
         background(frameCount % 10 == 0 ? 'white' : 'black')
     } else {
-        background(135, 206, 235)
+        background(211, 211, 211)
     }
     
     ground.display()
@@ -131,8 +131,8 @@ function draw() {
 class Sun {
 
     display() {
-        fill(245, 187, 87)
-        stroke(245, 187, 87)
+        fill('brown')
+        stroke('brown')
         push()
         translate(200, 180)
         scale(3)
@@ -159,7 +159,7 @@ class Ground {
 
     display() {
         noStroke()
-        fill(37.6, 50.2, 22)
+        fill(120, 120, 120)
         rect(0, windowHeight - this.height, windowWidth, this.height)
     }
 }
