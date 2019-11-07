@@ -43,6 +43,14 @@ function initializeElements() {
     }
 }
 
+function mouseClicked() {
+    weatherCode += 100
+    
+    if (weatherCode > 800) {
+        weatherCode = 200;
+    }
+}
+
 function draw() {
     if (weatherCode >= 200 && weatherCode <= 299) {
         background(frameCount % 10 == 0 ? 'white' : 'black')
@@ -54,9 +62,6 @@ function draw() {
 
     switch (weatherCode) {
         case 800:
-            sun.display()
-            break
-
         case 801:
         case 802:
         case 803:
@@ -124,6 +129,10 @@ function draw() {
                 drop.dropRain()
                 drop.splash()
             }
+            break
+            
+        default:
+            sun.display()
             break
     }
 }
